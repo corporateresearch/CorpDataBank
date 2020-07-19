@@ -1,0 +1,26 @@
+﻿@model CorpDataBank.Models.AdminResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登録完了</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="text-center">
+    <div>
+        <h1>@Model.Name!が登録されました。</h1>
+        @if (Model.Agree == true)
+        {
+            @:企業の基本情報がデータベースに保存されました。登録ありがとうございました。
+        }
+        else
+        {
+            @:データは保存されませんでした。ありがとうございました。
+        }
+    </div>
+    データベースをアクセスするには、<a asp-action="ListCompanies">ここ</a>をクリックしてください。
+</body>
+</html>

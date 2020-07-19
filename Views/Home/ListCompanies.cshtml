@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CorpDataBank.Models.AdminResponse>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>データベース</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="text-center p-2">
+        <h2>企業基本情報のデータベース</h2>
+        <table  class="table table-bordered table-striped table-sm">
+            <thead>
+                <tr><th>社名</th><th>登録番号</th><th>住所</th></tr>
+            </thead>
+            <tbody>
+                @foreach (CorpDataBank.Models.AdminResponse r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.RegistrationNumber</td>
+                        <td>@r.Address</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

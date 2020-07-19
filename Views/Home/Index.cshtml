@@ -1,8 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>CorpDataBank</title>
+</head>
+<body>
+    <div>
+        <div class="text-center">
+            <h3>ようこそ、ビジネスの世界へ</h3>
+            <h4>みんなの力を合わせて企業のデータベースを作成しましょう！</h4>
+            <a class="btn btn-primary" asp-action="KaishaForm">会社を登録</a>
+        </div>
+    </div>
+</body>
+</html>

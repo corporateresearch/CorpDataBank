@@ -1,0 +1,45 @@
+﻿@model CorpDataBank.Models.AdminResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>会社情報入力フォーム</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <h5 class="bg-primary text-white text-center m-2 p-2">企業情報</h5>
+    <form asp-action="KaishaForm" method="post" class="m-2">
+
+        <div asp-validation-summary="All"></div>
+
+        <div class="form-group">
+            <label asp-for="Name">社名</label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for=" RegistrationNumber">登録番号</label>
+            <input asp-for=" RegistrationNumber" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Address">住所</label>
+            <input asp-for="Address"  class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label>データベースに会社情報を保存してもよろしいですか。</label>
+            <select asp-for="Agree" class="form-control">
+                <option value="">選択肢を選んでください。</option>
+                <option value="true">はい。</option>
+                <option value="false">いいえ。</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">データを登録</button>
+    </form>
+</body>
+</html>
